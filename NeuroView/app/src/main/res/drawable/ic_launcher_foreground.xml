@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Olho externo -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,38 C34,38 20,54 20,54 C20,54 34,70 54,70 C74,70 88,54 88,54 C88,54 74,38 54,38 Z"/>
+
+    <!-- Iris -->
+    <path
+        android:fillColor="#42A5F5"
+        android:pathData="M54,44 C47.4,44 42,49.4 42,56 C42,62.6 47.4,68 54,68 C60.6,68 66,62.6 66,56 C66,49.4 60.6,44 54,44 Z"/>
+
+    <!-- Pupila -->
+    <path
+        android:fillColor="#0D47A1"
+        android:pathData="M54,50 C50.7,50 48,52.7 48,56 C48,59.3 50.7,62 54,62 C57.3,62 60,59.3 60,56 C60,52.7 57.3,50 54,50 Z"/>
+
+    <!-- Brilho -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M57,52 C57,52 60,52 60,55 C60,55 59,53 57,52 Z"/>
+
+</vector>

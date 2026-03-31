@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.neuroview'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.neuroview"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // FIX: Filtra ABIs para reduzir tamanho do APK e evitar conflito de .so do TFLite GPU
+        ndk {
+            abiFilters 'armeabi-v7a', 'arm64-v8a'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // FIX: AGP 8+ exige Java 17. Java 8 causava erro de compatibilidade com AGP 8.2+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    // FIX: 'aaptOptions' foi depreciado no AGP 8.x e causa erro em alguns ambientes.
+    // Substituído pelo bloco correto 'androidResources'.
+    androidResources {
+        noCompress 'tflite'
+    }
+
+    // FIX: Evita erro "More than one file was found with OS independent path"
+    // causado pelas bibliotecas nativas do TFLite GPU Delegate.
+    packaging {
+        resources {
+            excludes += [
+                'META-INF/DEPENDENCIES',
+                'META-INF/LICENSE',
+                'META-INF/LICENSE.txt',
+                'META-INF/NOTICE',
+                'META-INF/NOTICE.txt',
+                'META-INF/*.kotlin_module'
+            ]
+        }
+        // FIX: Mantém apenas uma cópia de cada .so nativo (evita conflito TFLite GPU)
+        jniLibs {
+            pickFirsts += ['**/*.so']
+        }
+    }
+}
+
+dependencies {
+    // FIX: Atualizado appcompat para versão compatível com AGP 8.2 + compileSdk 34
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // CameraX - captura de frames da câmera
+    // FIX: Atualizado para 1.3.4 (versão estável, corrige bugs de YUV no Android 14)
+    def camerax_version = "1.3.4"
+    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    implementation "androidx.camera:camera-view:${camerax_version}"
+
+    // TensorFlow Lite - roda o modelo YOLO no celular (offline)
+    // FIX: Atualizado para 2.16.1 (última versão estável, corrige crashes no Android 14)
+    implementation 'org.tensorflow:tensorflow-lite:2.16.1'
+    implementation 'org.tensorflow:tensorflow-lite-support:0.4.4'
+    // FIX: tensorflow-lite-gpu atualizado para 2.16.1 para manter consistência de versão
+    // IMPORTANTE: versões mistas (ex: core 2.14 + gpu 2.16) causam UnsatisfiedLinkError
+    implementation 'org.tensorflow:tensorflow-lite-gpu:2.16.1'
+    // FIX: Adicionado gpu-delegate-plugin para resolver problema de inicialização do GPU Delegate
+    implementation 'org.tensorflow:tensorflow-lite-gpu-delegate-plugin:0.4.4'
+
+    // FIX: Necessário para ListenableFuture usado no CameraManager (ProcessCameraProvider)
+    implementation 'com.google.guava:guava:32.1.3-android'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}

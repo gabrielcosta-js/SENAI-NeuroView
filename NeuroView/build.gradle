@@ -1,0 +1,5 @@
+// build.gradle (raiz do projeto)
+// FIX: Atualizado de 8.2.0 para 8.2.2 (versão estável com patches de compatibilidade)
+plugins {
+    id 'com.android.application' version '8.13.2' apply false
+}

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">NeuroView</string>
+
+    <!-- Auth -->
+    <string name="login_title">Entrar</string>
+    <string name="login_subtitle">Acesse sua conta NeuroView</string>
+    <string name="register_title">Criar conta</string>
+    <string name="register_subtitle">Comece a usar o NeuroView</string>
+    <string name="email_hint">E-mail</string>
+    <string name="password_hint">Senha</string>
+    <string name="name_hint">Nome completo</string>
+    <string name="confirm_password_hint">Confirmar senha</string>
+    <string name="btn_login">Entrar</string>
+    <string name="btn_register">Criar conta</string>
+    <string name="no_account">Não tem conta? <b>Cadastre-se</b></string>
+    <string name="has_account">Já tem conta? <b>Entrar</b></string>
+    <string name="forgot_password">Esqueci minha senha</string>
+
+    <!-- Home -->
+    <string name="home_greeting">Olá, %1$s</string>
+    <string name="home_subtitle">Seus dispositivos NeuroView</string>
+    <string name="no_glasses">Nenhum óculos cadastrado</string>
+    <string name="no_glasses_sub">Adicione seu primeiro dispositivo NeuroView</string>
+    <string name="btn_add_glasses">Adicionar óculos</string>
+    <string name="btn_connect">Abrir transmissão</string>
+    <string name="status_online">Online</string>
+    <string name="status_offline">Offline</string>
+
+    <!-- Register Glasses -->
+    <string name="register_glasses_title">Cadastrar Óculos</string>
+    <string name="device_id_hint">IP do ESP32-CAM</string>
+    <string name="device_name_hint">Nome do dispositivo (ex: Meu NeuroView)</string>
+    <string name="btn_register_glasses">Cadastrar dispositivo</string>
+    <string name="where_find_id">Fluxo recomendado</string>
+    <string name="id_help_text">Conecte o ESP32-CAM e o celular na mesma rede Wi-Fi e cadastre o IP local do ESP.</string>
+
+    <!-- Stream -->
+    <string name="stream_title">NeuroView Ativo</string>
+    <string name="connecting">Conectando...</string>
+    <string name="stream_connected">Transmissão ativa</string>
+    <string name="stream_disconnected">Desconectado</string>
+    <string name="detection_label">Objeto detectado:</string>
+    <string name="no_detection">Aguardando detecção...</string>
+    <string name="btn_disconnect">Desconectar</string>
+    <string name="wifi_tip">Use o ESP e o celular na mesma rede Wi-Fi para manter internet no celular.</string>
+
+    <!-- Errors -->
+    <string name="error_empty_fields">Preencha todos os campos</string>
+    <string name="error_invalid_email">E-mail inválido</string>
+    <string name="error_weak_password">Senha deve ter pelo menos 6 caracteres</string>
+    <string name="error_passwords_mismatch">As senhas não coincidem</string>
+    <string name="error_login">E-mail ou senha incorretos</string>
+    <string name="error_register">Erro ao criar conta. Tente novamente.</string>
+    <string name="error_glasses_register">Erro ao cadastrar dispositivo</string>
+    <string name="error_connection">Erro de conexão com o dispositivo</string>
+    <string name="error_id_exists">Este ID já está cadastrado</string>
+</resources>

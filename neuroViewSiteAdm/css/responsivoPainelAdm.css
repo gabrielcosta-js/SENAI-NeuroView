@@ -1,0 +1,110 @@
+@media (max-width: 760px) {
+  .sub-conteiner-topo {
+    padding: 14px 18px;
+  }
+
+  .usuario-logado span {
+    display: none;
+  }
+
+  .usuario-logado strong {
+    max-width: 170px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .conteiner-painel {
+    padding: 32px 18px 50px;
+  }
+
+  .conteiner-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .selo-painel {
+    display: none;
+  }
+
+  .topo-esquerda {
+    gap: 10px;
+  }
+
+  .topo-direita {
+    gap: 10px;
+  }
+
+  .btn-sair {
+    padding: 8px 14px;
+  }
+
+  table,
+  thead,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+
+  tr:last-child {
+    border-bottom: none;
+  }
+
+  td {
+    padding: 8px 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-bottom: none;
+    text-align: right;
+  }
+
+  td::before {
+    content: attr(data-label);
+    color: var(--cor-texto-secundario);
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  .email-tabela {
+    word-break: break-all;
+  }
+
+  .tabela-vazia {
+    display: block;
+    text-align: center;
+  }
+
+  .tabela-vazia::before {
+    content: "";
+  }
+}
+
+@media (max-width: 430px) {
+  .logo-painel img {
+    width: 48px;
+  }
+
+  .usuario-logado {
+    display: none;
+  }
+
+  .cabecalho-painel h1 {
+    font-size: 1.6rem;
+  }
+}

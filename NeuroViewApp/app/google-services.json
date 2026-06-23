@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "598265621179",
+    "project_id": "neuroview-7e52a",
+    "storage_bucket": "neuroview-7e52a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598265621179:android:a84342d5a1dca06108179e",
+        "android_client_info": {
+          "package_name": "com.neuroview.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPEvlUhHfgJg0pLGyAl2OtVs-qnx1M3-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

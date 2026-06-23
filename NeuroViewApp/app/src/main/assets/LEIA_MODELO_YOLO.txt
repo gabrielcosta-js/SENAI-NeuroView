@@ -1,0 +1,5 @@
+Para usar YOLO local, coloque aqui o modelo com um destes nomes:
+- yolo_model.tflite
+- yolov8n_float32.tflite
+
+O app tenta carregar primeiro yolo_model.tflite e depois yolov8n_float32.tflite.

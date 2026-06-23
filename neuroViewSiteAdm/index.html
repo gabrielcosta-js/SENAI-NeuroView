@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-br" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroView - Acesso ao Painel</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsivo.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="scripts/script.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <button id="btn-tema" aria-label="Mudar tema">
+        <i class="fa-solid fa-sun oculto"></i>
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="conteiner-autenticacao">
+        <div class="logo">
+          <img src="img/logo.png" alt="NeuroView" />
+        </div>
+
+        <div class="painel-informacoes">
+          <p>PAINEL ADMINISTRATIVO</p>
+          <h1 id="tituloFormulario">Bem-vindo de volta</h1>
+          <span id="textoFormulario">Entre para acessar o painel do NeuroView.</span>
+        </div>
+
+        <nav class="botoesNav">
+          <button id="btnEntrar" class="botaoDestaque">Entrar</button>
+          <button id="btnCriarConta">Criar conta</button>
+        </nav>
+
+        <form id="formAutenticacao">
+          <div id="nomeFormOculto" class="input-form oculto">
+            <label for="iNomeForm">Nome</label>
+            <input type="text" id="iNomeForm" placeholder="Seu nome" autocomplete="name" />
+          </div>
+
+          <div class="input-form">
+            <label for="iEmailForm">E-mail</label>
+            <input type="email" id="iEmailForm" placeholder="seu@email.com" autocomplete="email" />
+          </div>
+
+          <div class="input-form">
+            <label for="iSenhaForm">Senha</label>
+            <input type="password" id="iSenhaForm" placeholder="mínimo 6 caracteres" autocomplete="current-password" />
+          </div>
+
+          <button type="submit" id="btnLogar">Entrar</button>
+          <p id="mensagemForm" class="mensagem-form oculto"></p>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

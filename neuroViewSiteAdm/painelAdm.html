@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-br" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeuroView - Painel Administrativo</title>
+
+    <link rel="stylesheet" href="css/painelAdm.css" />
+    <link rel="stylesheet" href="css/responsivoPainelAdm.css" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" src="scripts/painelAdm.js"></script>
+  </head>
+
+  <body>
+    <div id="telaCarregando" class="tela-carregando">
+      <div class="carregando"></div>
+    </div>
+
+    <header class="topo">
+      <div class="sub-conteiner-topo">
+        <div class="topo-esquerda">
+          <a href="index.html" class="logo-painel">
+            <img src="img/logo.png" alt="NeuroView" />
+          </a>
+
+          <span class="selo-painel">Painel</span>
+        </div>
+
+        <div class="topo-direita">
+          <button id="btn-tema" aria-label="Mudar tema">
+            <i class="fa-solid fa-sun"></i>
+            <i class="fa-solid fa-moon oculto"></i>
+          </button>
+
+          <div class="usuario-logado">
+            <span>Conectado como</span>
+            <strong id="emailUsuario">Carregando...</strong>
+          </div>
+
+          <button class="btn-sair" id="btnSair">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="conteiner-painel">
+      <section class="cabecalho-painel">
+        <h1>Pré-cadastros</h1>
+        <p>Interessados que se cadastraram pelo site de vendas — atualizados em tempo real.</p>
+      </section>
+
+      <section class="conteiner-cards">
+        <div class="card-informacoes">
+          <h2 id="totalCadastros">0</h2>
+          <p>Total de cadastros</p>
+        </div>
+
+        <div class="card-informacoes">
+          <h2 class="numero-azul" id="totalGratuito">0</h2>
+          <p>Plano gratuito</p>
+        </div>
+
+        <div class="card-informacoes">
+          <h2 class="numero-ciano" id="totalPremium">0</h2>
+          <p>Interesse premium</p>
+        </div>
+      </section>
+
+      <section class="card-tabela">
+        <div class="tabela-topo">
+          <h2>Lista de interessados</h2>
+        </div>
+
+        <div class="conteiner-tabela">
+          <table>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Plano</th>
+                <th>Interesse</th>
+                <th>Quando</th>
+              </tr>
+            </thead>
+
+            <tbody id="corpoTabela">
+              <tr>
+                <td colspan="5" class="tabela-vazia">Carregando cadastros...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

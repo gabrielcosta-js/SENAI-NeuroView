@@ -1,0 +1,89 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.NeuroView" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/nv_green</item>
+        <item name="colorOnPrimary">@color/nv_text_inverse</item>
+        <item name="colorPrimaryContainer">@color/nv_green_dim</item>
+        <item name="colorOnPrimaryContainer">@color/nv_green</item>
+        <item name="colorSecondary">@color/nv_green_dark</item>
+        <item name="android:colorBackground">@color/nv_background</item>
+        <item name="colorSurface">@color/nv_surface</item>
+        <item name="colorOnSurface">@color/nv_text_primary</item>
+        <item name="colorError">@color/nv_error</item>
+        <item name="android:statusBarColor">@color/nv_background</item>
+        <item name="android:navigationBarColor">@color/nv_background</item>
+        <item name="android:windowBackground">@color/nv_background</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Theme.NeuroView.Splash" parent="Theme.NeuroView">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/nv_background</item>
+    </style>
+
+    <style name="TextStyle.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textColor">@color/nv_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">-0.03</item>
+    </style>
+
+    <style name="TextStyle.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/nv_text_primary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextStyle.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/nv_text_secondary</item>
+    </style>
+
+    <style name="Widget.NeuroView.Button.Primary" parent="Widget.Material3.Button">
+        <item name="backgroundTint">@color/nv_green</item>
+        <item name="android:textColor">@color/nv_text_inverse</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:letterSpacing">0.0</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.NeuroView.Button.Outline" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="backgroundTint">@color/nv_surface</item>
+        <item name="strokeColor">@color/nv_border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/nv_text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="cornerRadius">18dp</item>
+        <item name="elevation">0dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Widget.NeuroView.Card" parent="Widget.Material3.CardView.Outlined">
+        <item name="cardBackgroundColor">@color/nv_card</item>
+        <item name="strokeColor">@color/nv_border</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardCornerRadius">26dp</item>
+        <item name="cardElevation">0dp</item>
+    </style>
+
+    <style name="Widget.NeuroView.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/nv_surface</item>
+        <item name="boxStrokeColor">@color/nv_border</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxCornerRadiusTopStart">18dp</item>
+        <item name="boxCornerRadiusTopEnd">18dp</item>
+        <item name="boxCornerRadiusBottomStart">18dp</item>
+        <item name="boxCornerRadiusBottomEnd">18dp</item>
+        <item name="hintTextColor">@color/nv_text_secondary</item>
+        <item name="android:textColorHint">@color/nv_text_secondary</item>
+    </style>
+
+</resources>

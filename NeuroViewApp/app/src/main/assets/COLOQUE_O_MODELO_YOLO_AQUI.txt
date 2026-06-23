@@ -1,0 +1,1 @@
+Coloque aqui o arquivo yolo_model.tflite. O app usa YOLO quando esse arquivo existir; se não existir, usa ML Kit como fallback.

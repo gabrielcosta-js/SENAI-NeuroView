@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores Principais do Site */
+  --cor-primaria: #1a6fd4;
+  --cor-primaria-hover: #2280e8;
+  --cor-destaque: #06b6d4;
+  --cor-texto-destaque: #4da3ff;
+
+  /* Cores de Status */
+  --cor-sucesso: #22c55e;
+  --cor-erro: #ef4444;
+
+  /* Fontes utilizadas */
+  --fonte-titulo: "Space Grotesk", sans-serif;
+  --fonte-texto: "Inter", sans-serif;
+
+  /* Botões */
+  --cor-botao-destaque: #1a6fd4;
+}
+
+[data-theme="dark"] {
+  /* FUNDO */
+  --cor-fundo-principal: #020308;
+  --cor-fundo-secundaria: #0d0d18;
+  --cor-fundo-terciaria: #080810;
+
+  /* TEXTO */
+  --cor-titulo: #ffffff;
+  --cor-texto: #f2f2f7;
+  --cor-texto-secundario: #6e6e80;
+  --cor-placeholder: #ffffff69;
+
+  /* BORDAS */
+  --cor-borda: #1a6ed469;
+  --cor-borda-destaque: #2280e8;
+  --cor-borda-secundaria: rgba(255, 255, 255, 0.06);
+
+  /* EFEITOS */
+  --cor-grade: rgba(26, 111, 212, 0.035);
+  --cor-botao-sombra: rgba(26, 111, 212, 0.35);
+}
+
+[data-theme="light"] {
+  /* FUNDO */
+  --cor-fundo-principal: #ffffff;
+  --cor-fundo-secundaria: #ffffff;
+  --cor-fundo-terciaria: #f3f6fb;
+
+  /* TEXTO */
+  --cor-titulo: #0f1622;
+  --cor-texto: #0f1622;
+  --cor-texto-secundario: #5b6675;
+  --cor-placeholder: #aeb7c4;
+
+  /* BORDAS */
+  --cor-borda: rgba(26, 111, 212, 0.28);
+  --cor-borda-destaque: rgba(26, 111, 212, 0.35);
+  --cor-borda-secundaria: rgba(15, 30, 55, 0.09);
+
+  /* EFEITOS */
+  --cor-grade: rgba(26, 111, 212, 0.05);
+  --cor-botao-sombra: rgba(26, 111, 212, 0.22);
+}
+
+.oculto {
+  display: none !important;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--cor-fundo-principal);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(26, 111, 212, 0.1), transparent 65%),
+    linear-gradient(var(--cor-grade) 1px, transparent 1px),
+    linear-gradient(90deg, var(--cor-grade) 1px, transparent 1px);
+  background-size: auto, 54px 54px, 54px 54px;
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+}
+
+#btn-tema {
+  all: unset;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--cor-borda-secundaria);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: var(--cor-texto-secundario);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#btn-tema:hover {
+  color: var(--cor-texto);
+  border-color: var(--cor-borda);
+}
+
+main {
+  width: min(430px, calc(100% - 32px));
+  min-height: 560px;
+  padding: 46px 38px;
+
+  border-radius: 22px;
+  background-color: var(--cor-fundo-secundaria);
+  border: 1px solid var(--cor-borda);
+  border-top-color: var(--cor-borda-destaque);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+}
+
+.conteiner-autenticacao {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.logo img {
+  width: 80px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(rgba(26, 111, 212, 0.45) 0px 0px 12px);
+}
+
+[data-theme="light"] .logo img {
+  filter: brightness(0.55) saturate(1.25);
+}
+
+.painel-informacoes {
+  text-align: center;
+  font-family: var(--fonte-texto);
+}
+
+.painel-informacoes p {
+  color: var(--cor-texto-destaque);
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  margin-top: 8px;
+}
+
+.painel-informacoes h1 {
+  color: var(--cor-titulo);
+  font-family: var(--fonte-titulo);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-top: 14px;
+}
+
+.painel-informacoes span {
+  display: block;
+  color: var(--cor-texto-secundario);
+  margin-top: 8px;
+  font-size: 0.86rem;
+}
+
+.botoesNav {
+  margin-top: 34px;
+  width: 100%;
+  background-color: var(--cor-fundo-terciaria);
+  border-radius: 50px;
+  border: 1px solid var(--cor-borda-secundaria);
+  display: flex;
+  padding: 5px;
+  font-family: var(--fonte-texto);
+  font-weight: 700;
+}
+
+.botoesNav button {
+  all: unset;
+  cursor: pointer;
+  color: var(--cor-texto-secundario);
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  font-size: 0.86rem;
+}
+
+.botoesNav button:disabled {
+  cursor: default;
+}
+
+.botaoDestaque {
+  background: var(--cor-botao-destaque) !important;
+  box-shadow: 0 0 22px var(--cor-botao-sombra) !important;
+  color: #fff !important;
+}
+
+form {
+  margin-top: 28px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  font-family: var(--fonte-texto);
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-form label {
+  color: var(--cor-texto-secundario);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.input-form input {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 10px;
+  border: 1px solid var(--cor-borda-secundaria);
+  background-color: var(--cor-fundo-terciaria);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input-form input::placeholder {
+  color: var(--cor-placeholder);
+}
+
+.input-form input:focus {
+  border-color: rgba(26, 111, 212, 0.45);
+}
+
+.input-form input.erro-input {
+  border-color: rgba(239, 68, 68, 0.65);
+}
+
+#btnLogar {
+  margin-top: 5px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--cor-botao-destaque);
+  color: #fff;
+  font-family: var(--fonte-texto);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 0 22px var(--cor-botao-sombra);
+}
+
+#btnLogar:hover {
+  background-color: var(--cor-primaria-hover);
+}
+
+#btnLogar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.mensagem-form {
+  padding: 11px 13px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.mensagem-form.erro {
+  display: block !important;
+  color: #fca5a5;
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.mensagem-form.sucesso {
+  display: block !important;
+  color: #86efac;
+  background-color: rgba(34, 197, 94, 0.1);
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+[data-theme="light"] .mensagem-form.erro {
+  color: #dc2626;
+}
+
+[data-theme="light"] .mensagem-form.sucesso {
+  color: #16a34a;
+}

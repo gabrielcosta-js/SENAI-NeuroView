@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- NeuroView Premium Palette - Apple inspired -->
+    <color name="nv_background">#F5F8FF</color>
+    <color name="nv_surface">#FFFFFF</color>
+    <color name="nv_surface_soft">#F0F6FF</color>
+    <color name="nv_card">#FFFFFF</color>
+    <color name="nv_card_elevated">#FFFFFF</color>
+    <color name="nv_border">#D9E6F8</color>
+
+    <!-- Accent - Modern Blue -->
+    <color name="nv_green">#007AFF</color>
+    <color name="nv_green_dark">#005FCC</color>
+    <color name="nv_green_dim">#E8F2FF</color>
+    <color name="nv_green_alpha">#33007AFF</color>
+
+    <!-- Premium - Amber -->
+    <color name="nv_amber">#FF9F0A</color>
+    <color name="nv_amber_dim">#FFF4DF</color>
+
+    <!-- Error - iOS Red -->
+    <color name="nv_error">#FF3B30</color>
+    <color name="nv_error_dim">#FFE9E7</color>
+
+    <!-- Text -->
+    <color name="nv_text_primary">#071427</color>
+    <color name="nv_text_secondary">#5E6B7D</color>
+    <color name="nv_text_tertiary">#8A98AA</color>
+    <color name="nv_text_inverse">#FFFFFF</color>
+    <color name="nv_text_on_dark">#FFFFFF</color>
+    <color name="nv_text_on_dark_secondary">#D7E4F5</color>
+
+    <!-- System -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>
